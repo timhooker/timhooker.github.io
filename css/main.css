@@ -1,0 +1,232 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: sans-serif;
+  line-height: 1.4em;
+  background: #FFF;
+  color: #444; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+h2 {
+  font-size: 1.5em;
+  margin: .75em 0; }
+
+h3 {
+  font-size: 1.17em;
+  margin: .83em 0; }
+
+h5 {
+  font-size: .83em;
+  margin: 1.5em 0; }
+
+h6 {
+  font-size: .75em;
+  margin: 1.67em 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bolder; }
+
+p {
+  line-height: 1.4em;
+  margin-bottom: 1em; }
+
+a {
+  color: #00AAEE;
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'lavandaria';
+  src: url(../fonts/lavanderia-sturdy.otf);
+  font-weight: 800; }
+
+h3 {
+  font-family: 'lavandaria';
+  font-size: 2em; }
+
+.page-footer {
+  letter-spacing: .75em;
+  font-weight: 100; }
+
+* {
+  box-sizing: border-box; }
+
+.page-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%; }
+
+.page-header {
+  background-image: url("../img/halftone.png");
+  padding-bottom: 2em;
+  text-align: center;
+  position: relative;
+  /* making some modifications to the logo and layout in
+  the header as the page grows */ }
+  @media only screen and (min-width: 768px) {
+    .page-header {
+      text-align: left; }
+      .page-header .page-header-logo {
+        width: 16.666%;
+        margin-left: 8.333%; } }
+  .page-header:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(0deg, white, white 10%, transparent); }
+
+.page-section {
+  padding: 2em;
+  display: block; }
+
+.page-section-content {
+  max-width: 1180px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 500; }
+
+.page-section-primary {
+  background-color: #4C6268;
+  color: #C9CEAD; }
+
+.page-section-secondary {
+  text-align: right;
+  background-image: url("../img/halftone.png"); }
+
+.page-section-tertiary {
+  background-color: #C9CEAD;
+  background-image: url("../img/halftone-opacity.png"); }
+
+.page-footer {
+  padding: 1em;
+  background-color: #BB4D49;
+  color: #fff; }
+
+.page-header-logo {
+  width: 50%; }
+
+.project-img {
+  width: 100%;
+  height: auto;
+  -webkit-transform: scale(1.05, 1.05);
+  transform: scale(1.05, 1.05);
+  transition: -webkit-transform .6s;
+  transition: transform .6s; }
+
+.project-image-wrapper {
+  width: 100%;
+  display: inline-block; }
+
+.project-about {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1em; }
+
+/*                          *\
+          Hero stylings
+\*                          */
+.giro-section {
+  background-color: #212a2d;
+  box-shadow: inset 0px 10px 200px black; }
+
+.page-section-giro {
+  width: 100%; }
+  .page-section-giro:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0; }
+
+.giro-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition-property: opacity, .5s;
+  padding: 1em;
+  background-color: #BB4D49;
+  border: 0;
+  color: #fff;
+  font-weight: bold;
+  font-family: 'lavandaria';
+  font-size: 1.5em; }
+
+.giro-block {
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  float: left;
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .giro-block {
+      width: 33.333%; } }
+  .giro-block:hover .giro-button {
+    opacity: .8; }
+  .giro-block:hover .project-img {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); }
+  .giro-block:hover:after {
+    opacity: .2; }
+
+.giro-block:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  opacity: .9;
+  transition: opacity .5s; }
+
+.giro-one:after {
+  background-color: #BB4D49; }
+
+.giro-two:after {
+  background-color: #83A9AE; }
+
+.giro-three:after {
+  background-color: #4C6268; }
+
+.giro-four:after {
+  background-color: #4C6268; }
+
+.giro-five:after {
+  background-color: #C9CEAD; }
+
+.giro-six:after {
+  background-color: #4C6268; }
